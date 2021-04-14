@@ -1,0 +1,89 @@
+doctype html
+html(lang="en")
+  head
+    title= "Prisma Studio"
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    link(rel="icon" type="image/svg+xml" href="favicon.svg")
+
+    if development
+      style.
+        /* Local fonts to allow running 100% offline */
+        @font-face {
+          font-family: 'Inter';
+          src: url('http://localhost:3000/fonts/Inter.ttf') format('truetype');
+          font-weight: 100 900;
+        }
+
+        @font-face {
+          font-family: 'Roboto Mono';
+          src: url('http://localhost:3000/fonts/RobotoMono.ttf') format('truetype');
+          font-weight: 100 700;
+        }
+
+    else
+      style.
+        /* Local fonts to allow running 100% offline */
+        @font-face {
+          font-family: 'Inter';
+          src: url('fonts/Inter.ttf') format('truetype');
+          font-weight: 100 900;
+        }
+
+        @font-face {
+          font-family: 'Roboto Mono';
+          src: url('fonts/RobotoMono.ttf') format('truetype');
+          font-weight: 100 700;
+        }
+
+  body
+    noscript You neeed to enable Javascript to run this app
+    #root
+    if development
+      style.
+        /* Local fonts to allow running 100% offline */
+        @font-face {
+          font-family: 'Inter';
+          src: url('http://localhost:3000/fonts/Inter.ttf') format('truetype');
+          font-weight: 100 900;
+        }
+
+        @font-face {
+          font-family: 'Roboto Mono';
+          src: url('http://localhost:3000/fonts/RobotoMono.ttf') format('truetype');
+          font-weight: 100 700;
+        }
+
+      script(type="module").
+        import RefreshRuntime from "http://localhost:3000/@react-refresh"
+        RefreshRuntime.injectIntoGlobalHook(window) 
+        window.$RefreshReg$ = () => {}
+        window.$RefreshSig$ = () => (type) => type
+        window.__vite_plugin_react_preamble_installed__ = true
+      script(type="module" src="http://localhost:3000/@vite/client")
+      script(type="module" src="http://localhost:3000/src/index.tsx")
+    else
+      style.
+        /* Local fonts to allow running 100% offline */
+        @font-face {
+          font-family: 'Inter';
+          src: url('fonts/Inter.ttf') format('truetype');
+          font-weight: 100 900;
+        }
+
+        @font-face {
+          font-family: 'Roboto Mono';
+          src: url('fonts/RobotoMono.ttf') format('truetype');
+          font-weight: 100 700;
+        }
+      link(rel="stylesheet" href=`/${manifest['src/index.tsx'].css}`)
+      script(type="module" src=`/${manifest['src/index.tsx'].file}`)
+
+    script(type="module").
+      window.addEventListener('load', function (event) {
+        PrismaStudio.databrowser({
+          transport: 'http',
+        })
+      })
+

@@ -1,0 +1,34 @@
+{
+  "src/index.tsx": {
+    "file": "index.js",
+    "src": "src/index.tsx",
+    "isEntry": true,
+    "imports": [
+      "_vendor.c4d0f081.js"
+    ],
+    "dynamicImports": [
+      "../transports/dist/http/browser.mjs",
+      "../transports/dist/electron/browser.mjs"
+    ],
+    "css": [
+      "index.css"
+    ]
+  },
+  "_vendor.c4d0f081.js": {
+    "file": "assets/vendor.c4d0f081.js"
+  },
+  "../transports/dist/http/browser.mjs": {
+    "file": "assets/browser.cdd2249a.js",
+    "src": "../transports/dist/http/browser.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/index.tsx",
+      "_vendor.c4d0f081.js"
+    ]
+  },
+  "../transports/dist/electron/browser.mjs": {
+    "file": "assets/browser.38b7fdb1.js",
+    "src": "../transports/dist/electron/browser.mjs",
+    "isDynamicEntry": true
+  }
+}

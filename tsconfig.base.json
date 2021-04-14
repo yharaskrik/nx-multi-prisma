@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@prisma-test/prisma1": ["libs/prisma1/src/index.ts"],
+      "@prisma-test/prisma2": ["libs/prisma2/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
