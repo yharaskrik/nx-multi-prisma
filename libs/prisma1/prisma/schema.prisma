@@ -9,7 +9,6 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
   output   = "../generated/prisma-client"
-  binaryTargets = ["native"]
 }
 
 model PrismaOneProduct {
