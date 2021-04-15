@@ -10,7 +10,7 @@ export class AppService {
   ) {
     this.prismaOneService.prismaOneProduct;
     // This one type checks to having the same table as PrismaOneService even though it should have Cateogry
-    this.prismaTwoService.prismaOneProduct;
+    this.prismaTwoService.category;
   }
 
   getData(): { message: string } {
