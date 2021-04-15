@@ -25,7 +25,9 @@
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "prisma1": "yarn prisma generate --schema libs/prisma1/prisma/schema.prisma",
+    "prisma2": "yarn prisma generate --schema libs/prisma2/prisma/schema.prisma"
   },
   "private": true,
   "dependencies": {
